@@ -1,0 +1,7 @@
+# Output files
+*.svg
+*.png
+*.pdf
+
+# Libre Office lock file
+.~lock.*#
