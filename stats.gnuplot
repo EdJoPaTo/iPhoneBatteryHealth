@@ -8,7 +8,7 @@ set timefmt "%Y-%m"
 set term svg size 1000,800 dynamic
 set output "output.svg"
 
-set key autotitle columnhead
+set key bottom autotitle columnhead
 set style data linespoints
 set title "iPhone Battery Health"
 set ylabel "Battery Health"
