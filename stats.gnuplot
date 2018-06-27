@@ -1,3 +1,5 @@
+#!/usr/bin/env gnuplot
+
 file = "stats.csv"
 numberOfColumns = system("head -1 " . file . " | sed 's/[^,]//g' | wc -c")
 
@@ -19,3 +21,11 @@ set grid
 set xtics "2018-01",2592000,"2020-12"
 
 plot for [i=2:numberOfColumns] file using 1:i
+
+set term pdfcairo size 20cm,15cm
+set output "output.pdf"
+replot
+
+set term pngcairo size 1000,800
+set output "output.png"
+replot
