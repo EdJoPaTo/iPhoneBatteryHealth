@@ -5,7 +5,7 @@ set datafile separator ","
 set xdata time
 set timefmt "%Y-%m"
 
-set term svg
+set term svg size 1000,800 dynamic
 set output "output.svg"
 
 set key autotitle columnhead
