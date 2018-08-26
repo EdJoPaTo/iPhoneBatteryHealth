@@ -16,6 +16,7 @@ async function doIt() {
 doIt()
 
 async function generateGraph(data, func, name) {
+  console.log('create', name)
   const output = func(data.header, data.csvLines)
   await writeCsvFile(`tmp/${name}.csv`, output.header, output.csvLines)
   await runGnuplot(`${name}.gnuplot`)
