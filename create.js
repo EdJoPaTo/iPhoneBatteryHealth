@@ -4,13 +4,16 @@ const util = require('util')
 const exec = util.promisify(childProcess.exec)
 
 const {readCsvFile, writeCsvFile} = require('./csv-files')
-const {
-  simpleFlip
-} = require('./csv-helper')
+const {deviceHistory} = require('./parse-graph-data')
 
 async function doIt() {
-  const {header, csvLines} = await readCsvFile('stats.csv')
-  const flipped = simpleFlip(header, csvLines)
-  await writeCsvFile('flipped.csv', flipped.header, flipped.csvLines)
+  const data = await readCsvFile('data.csv')
+  const deviceHistoryCsv = await deviceHistory(data.header, data.csvLines)
+  await writeCsvFile('tmp/device-history.csv', deviceHistoryCsv.header, deviceHistoryCsv.csvLines)
+  await runGnuplot('device-history.gnuplot')
 }
 doIt()
+
+async function runGnuplot(script) {
+  await exec(`gnuplot ${script}`)
+}

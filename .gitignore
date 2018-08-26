@@ -1,10 +1,8 @@
+dist/
+tmp/
+
 # node
 node_modules
-
-# Output files
-*.svg
-*.png
-*.pdf
 
 # Libre Office lock file
 .~lock.*#
