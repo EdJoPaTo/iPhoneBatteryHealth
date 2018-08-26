@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "main": "create.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "ava": "ava",
+    "ava:watch": "ava -w",
+    "xo": "xo",
+    "start": "node create.js",
+    "pretest": "xo",
+    "test": "nyc ava"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "nyc": "^12.0.2",
+    "xo": "^0.22.0"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false
+  }
+}
