@@ -25,8 +25,12 @@ function deviceHistory(header, csvLines) {
       .map(o => o.trim())
     outputHeader.push(`${phone} ${age} (${name})`)
 
-    for (let i = 0; i < percentages.length; i++) {
-      monthRows[i].push(percentages[i])
+    for (let i = 0; i < monthRows.length; i++) {
+      if (percentages[i]) {
+        monthRows[i].push(percentages[i])
+      } else {
+        monthRows[i].push('')
+      }
     }
   }
 
