@@ -8,11 +8,16 @@ const {deviceHistory} = require('./device-history')
 
 async function doIt() {
   const data = await readCsvFile('data.csv')
-  const deviceHistoryCsv = await deviceHistory(data.header, data.csvLines)
-  await writeCsvFile('tmp/device-history.csv', deviceHistoryCsv.header, deviceHistoryCsv.csvLines)
-  await runGnuplot('device-history.gnuplot')
+
+  await generateGraph(data, deviceHistory, 'device-history')
 }
 doIt()
+
+async function generateGraph(data, func, name) {
+  const output = func(data.header, data.csvLines)
+  await writeCsvFile(`tmp/${name}.csv`, output.header, output.csvLines)
+  await runGnuplot(`${name}.gnuplot`)
+}
 
 async function runGnuplot(script) {
   await exec(`gnuplot ${script}`)
