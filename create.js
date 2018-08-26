@@ -4,7 +4,7 @@ const util = require('util')
 const exec = util.promisify(childProcess.exec)
 
 const {readCsvFile, writeCsvFile} = require('./csv-files')
-const {deviceHistory} = require('./parse-graph-data')
+const {deviceHistory} = require('./device-history')
 
 async function doIt() {
   const data = await readCsvFile('data.csv')

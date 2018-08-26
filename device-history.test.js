@@ -1,9 +1,9 @@
 import test from 'ava'
 import {
   deviceHistory
-} from './parse-graph-data'
+} from './device-history'
 
-test('deviceHistory example', t => {
+test('example', t => {
   const inputHeader = ['Phone', 'Age', 'Name', '2018-05', '2018-06', '2018-07']
   const inputLines = [
     'X, 18-04, Peter, 100, 95, 90',
@@ -21,7 +21,7 @@ test('deviceHistory example', t => {
   })
 })
 
-test('deviceHistory later start missing will have empty value', t => {
+test('later start missing will have empty value', t => {
   const inputHeader = ['Phone', 'Age', 'Name', '2018-05', '2018-06', '2018-07']
   const inputLines = [
     'X, 18-04, Peter,   , 95, 90',
@@ -39,7 +39,7 @@ test('deviceHistory later start missing will have empty value', t => {
   })
 })
 
-test('deviceHistory data not yet available will create empty place', t => {
+test('data not yet available will create empty place', t => {
   const inputHeader = ['Phone', 'Age', 'Name', '2018-05', '2018-06', '2018-07']
   const inputLines = [
     'X, 18-04, Peter, 100, 95',
