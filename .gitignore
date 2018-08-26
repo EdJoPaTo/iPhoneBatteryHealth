@@ -3,6 +3,7 @@ tmp/
 
 # node
 node_modules
+.nyc_output
 
 # Libre Office lock file
 .~lock.*#
