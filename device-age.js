@@ -78,7 +78,7 @@ function deviceAge(header, csvLines) {
       continue
     }
 
-    outputHeader.push(`${phone} ${age} (${name})`)
+    outputHeader.push(`(${name}) ${phone} ${age}`)
 
     for (let i = 0; i < percentages.length; i++) {
       if (!percentages[i]) {

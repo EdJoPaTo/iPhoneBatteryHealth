@@ -23,7 +23,7 @@ function deviceHistory(header, csvLines) {
     const [phone, age, name, ...percentages] = line
       .split(',')
       .map(o => o.trim())
-    outputHeader.push(`${phone} ${age} (${name})`)
+    outputHeader.push(`(${name}) ${phone} ${age}`)
 
     for (let i = 0; i < monthRows.length; i++) {
       if (percentages[i]) {
