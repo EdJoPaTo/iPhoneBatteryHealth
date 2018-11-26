@@ -9,7 +9,7 @@ test('example', t => {
     'X, 18-04, Peter, 100, 95, 90',
     '7, 18-01, Klaus, 97, 92, 87'
   ]
-  const outputHeader = ['Month', 'X 18-04 (Peter)', '7 18-01 (Klaus)']
+  const outputHeader = ['Month', '(Peter) X 18-04', '(Klaus) 7 18-01']
   const outputLines = [
     '2018-05, 100, 97',
     '2018-06, 95, 92',
@@ -27,7 +27,7 @@ test('later start missing will have empty value', t => {
     'X, 18-04, Peter,   , 95, 90',
     '7, 18-01, Klaus, 97, 92, 87'
   ]
-  const outputHeader = ['Month', 'X 18-04 (Peter)', '7 18-01 (Klaus)']
+  const outputHeader = ['Month', '(Peter) X 18-04', '(Klaus) 7 18-01']
   const outputLines = [
     '2018-05, , 97',
     '2018-06, 95, 92',
@@ -45,7 +45,7 @@ test('data not yet available will create empty place', t => {
     'X, 18-04, Peter, 100, 95',
     '7, 18-01, Klaus, 97, 92, 87'
   ]
-  const outputHeader = ['Month', 'X 18-04 (Peter)', '7 18-01 (Klaus)']
+  const outputHeader = ['Month', '(Peter) X 18-04', '(Klaus) 7 18-01']
   const outputLines = [
     '2018-05, 100, 97',
     '2018-06, 95, 92',

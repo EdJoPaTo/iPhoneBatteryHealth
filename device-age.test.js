@@ -44,7 +44,7 @@ test('deviceAge example', t => {
     'X, 18-05, Peter, 100, 95, 90',
     '7, 18-04, Klaus, 97, 92, 87'
   ]
-  const outputHeader = ['Age', 'X 18-05 (Peter)', '7 18-04 (Klaus)']
+  const outputHeader = ['Age', '(Peter) X 18-05', '(Klaus) 7 18-04']
   const outputLines = [
     '0, 100, ',
     '1, 95, 97',
