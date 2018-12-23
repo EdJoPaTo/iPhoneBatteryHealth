@@ -4,14 +4,14 @@ const util = require('util')
 const exec = util.promisify(childProcess.exec)
 
 const {readCsvFile, writeCsvFile} = require('./csv-files')
-const {deviceAge} = require('./device-age')
-const {deviceHistory} = require('./device-history')
+const {batteryAge} = require('./battery-age')
+const {batteryHistory} = require('./battery-history')
 
 async function doIt() {
   const data = await readCsvFile('data.csv')
 
-  await generateGraph(data, deviceAge, 'device-age')
-  await generateGraph(data, deviceHistory, 'device-history')
+  await generateGraph(data, batteryAge, 'battery-age')
+  await generateGraph(data, batteryHistory, 'battery-history')
 }
 doIt()
 

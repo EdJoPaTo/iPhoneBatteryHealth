@@ -53,7 +53,7 @@ function getOldestAge(ageArr) {
   return getAgeString({year, month})
 }
 
-function deviceAge(header, csvLines) {
+function batteryAge(header, csvLines) {
   const oldestAge = getOldestAge(
     csvLines.map(line => line.split(',')[1].trim())
   )
@@ -110,5 +110,5 @@ module.exports = {
   getAgeString,
   getAgeInMonths,
   getOldestAge,
-  deviceAge
+  batteryAge
 }

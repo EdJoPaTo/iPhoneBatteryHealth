@@ -1,12 +1,12 @@
 #!/usr/bin/env gnuplot
 
-file = "tmp/device-age.csv"
+file = "tmp/battery-age.csv"
 numberOfColumns = system("head -1 " . file . " | sed 's/[^,]//g' | wc -c")
 
 set datafile separator ","
 
 set term svg size 1000,800 dynamic
-set output "dist/device-age.svg"
+set output "dist/battery-age.svg"
 
 set key top autotitle columnhead
 set style data linespoints
@@ -24,9 +24,9 @@ set mxtics 4
 plot for [i=2:numberOfColumns] file using 1:i
 
 set term pdfcairo size 20cm,15cm
-set output "dist/device-age.pdf"
+set output "dist/battery-age.pdf"
 replot
 
 set term pngcairo size 1000,800
-set output "dist/device-age.png"
+set output "dist/battery-age.png"
 replot

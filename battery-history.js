@@ -1,4 +1,4 @@
-function deviceHistory(header, csvLines) {
+function batteryHistory(header, csvLines) {
   console.assert(header[0] === 'Phone', 'something is ')
   if (header[0] !== 'Phone' ||
       header[1] !== 'Age' ||
@@ -43,5 +43,5 @@ function deviceHistory(header, csvLines) {
 }
 
 module.exports = {
-  deviceHistory
+  batteryHistory
 }

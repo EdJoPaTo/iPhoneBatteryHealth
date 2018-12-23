@@ -4,8 +4,8 @@ import {
   getAgeString,
   getAgeInMonths,
   getOldestAge,
-  deviceAge
-} from './device-age'
+  batteryAge
+} from './battery-age'
 
 test('getAgeVal YYYY-MM', t => {
   t.deepEqual(getAgeVal('2018-04'), {year: 2018, month: 4})
@@ -38,7 +38,7 @@ test('getOldestAge', t => {
   t.is(getOldestAge(['2018-04', '2018-01']), '2018-01')
 })
 
-test('deviceAge example', t => {
+test('batteryAge example', t => {
   const inputHeader = ['Phone', 'Age', 'Name', '2018-05', '2018-06', '2018-07']
   const inputLines = [
     'X, 18-05, Peter, 100, 95, 90',
@@ -51,7 +51,7 @@ test('deviceAge example', t => {
     '2, 90, 92',
     '3, , 87'
   ]
-  t.deepEqual(deviceAge(inputHeader, inputLines), {
+  t.deepEqual(batteryAge(inputHeader, inputLines), {
     header: outputHeader,
     csvLines: outputLines
   })

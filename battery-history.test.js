@@ -1,7 +1,7 @@
 import test from 'ava'
 import {
-  deviceHistory
-} from './device-history'
+  batteryHistory
+} from './battery-history'
 
 test('example', t => {
   const inputHeader = ['Phone', 'Age', 'Name', '2018-05', '2018-06', '2018-07']
@@ -15,7 +15,7 @@ test('example', t => {
     '2018-06, 95, 92',
     '2018-07, 90, 87'
   ]
-  t.deepEqual(deviceHistory(inputHeader, inputLines), {
+  t.deepEqual(batteryHistory(inputHeader, inputLines), {
     header: outputHeader,
     csvLines: outputLines
   })
@@ -33,7 +33,7 @@ test('later start missing will have empty value', t => {
     '2018-06, 95, 92',
     '2018-07, 90, 87'
   ]
-  t.deepEqual(deviceHistory(inputHeader, inputLines), {
+  t.deepEqual(batteryHistory(inputHeader, inputLines), {
     header: outputHeader,
     csvLines: outputLines
   })
@@ -51,7 +51,7 @@ test('data not yet available will create empty place', t => {
     '2018-06, 95, 92',
     '2018-07, , 87'
   ]
-  t.deepEqual(deviceHistory(inputHeader, inputLines), {
+  t.deepEqual(batteryHistory(inputHeader, inputLines), {
     header: outputHeader,
     csvLines: outputLines
   })
