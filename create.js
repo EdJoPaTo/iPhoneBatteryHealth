@@ -1,18 +1,16 @@
-const gnuplot = require('./gnuplot')
+const fsPromise = require('fs').promises
 
-const {readCsvFile, writeCsvFile} = require('./csv-files')
 const {batteryAge} = require('./battery-age')
 
 doIt()
 async function doIt() {
-  const data = await readCsvFile('data.csv')
+  const data = JSON.parse(await fsPromise.readFile('data.json', 'utf8'))
+  const batteries = data
+    .flatMap(person => person.batteries.map(bat => {
+      bat.person = person._name
+      return bat
+    }))
 
-  await generateGraph(data, batteryAge, 'battery-age')
-}
-
-async function generateGraph(data, func, name) {
-  console.log('create', name)
-  const output = func(data.header, data.csvLines)
-  await writeCsvFile(`tmp/${name}.csv`, output.header, output.csvLines)
-  await gnuplot.run(`${name}.gnuplot`)
+  console.log('create battery-age')
+  await batteryAge(batteries)
 }

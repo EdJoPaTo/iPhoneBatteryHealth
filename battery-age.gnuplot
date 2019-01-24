@@ -1,8 +1,5 @@
 #!/usr/bin/env gnuplot
 
-file = "tmp/battery-age.csv"
-numberOfColumns = system("head -1 " . file . " | sed 's/[^,]//g' | wc -c")
-
 set datafile separator ","
 
 set term svg size 1000,800 dynamic
@@ -21,7 +18,7 @@ set grid xtics mxtics ytics linestyle 100, linestyle 101
 set xtics 12
 set mxtics 4
 
-plot for [i=2:numberOfColumns] file using 1:i
+plot for [i=1:lines] "tmp/age-".i.".csv" using 1:2
 
 set term pdfcairo size 20cm,15cm
 set output "dist/battery-age.pdf"

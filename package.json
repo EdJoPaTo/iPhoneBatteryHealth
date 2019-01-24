@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/EdJoPaTo/iPhoneBatteryHealth#readme",
   "engines": {
-    "node": ">=10"
+    "node": ">=11"
   },
   "scripts": {
     "ava": "ava",
@@ -22,7 +22,9 @@
     "pretest": "xo",
     "test": "nyc ava"
   },
-  "dependencies": {},
+  "dependencies": {
+    "json-stable-stringify": "^1.0.1"
+  },
   "devDependencies": {
     "ava": "^1.1.0",
     "nyc": "^13.1.0",
