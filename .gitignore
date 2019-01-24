@@ -1,4 +1,5 @@
-dist/
+*.pdf
+*.png
 tmp/
 
 # node
