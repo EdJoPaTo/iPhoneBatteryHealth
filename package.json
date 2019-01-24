@@ -2,6 +2,15 @@
   "private": true,
   "version": "1.0.0",
   "main": "create.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdJoPaTo/iPhoneBatteryHealth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EdJoPaTo/iPhoneBatteryHealth/issues"
+  },
+  "homepage": "https://github.com/EdJoPaTo/iPhoneBatteryHealth#readme",
   "engines": {
     "node": ">=10"
   },
