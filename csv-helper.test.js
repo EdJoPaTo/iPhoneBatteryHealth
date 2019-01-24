@@ -6,9 +6,9 @@ import {
 } from './csv-helper'
 
 test('parseCsvFromFileContent example', t => {
-  let csv = `name,value\n`
-  csv += `peter,42\n`
-  csv += `klaus,0`
+  let csv = 'name,value\n'
+  csv += 'peter,42\n'
+  csv += 'klaus,0'
   t.deepEqual(parseCsvFromFileContent(csv), {
     header: ['name', 'value'],
     csvLines: [
@@ -19,11 +19,11 @@ test('parseCsvFromFileContent example', t => {
 })
 
 test('parseCsvFromFileContent skip empty lines', t => {
-  let csv = `name,value\n`
-  csv += `\n`
-  csv += `peter,42\n`
-  csv += `\n`
-  csv += `klaus,0\n`
+  let csv = 'name,value\n'
+  csv += '\n'
+  csv += 'peter,42\n'
+  csv += '\n'
+  csv += 'klaus,0\n'
 
   t.deepEqual(parseCsvFromFileContent(csv), {
     header: ['name', 'value'],
@@ -40,9 +40,9 @@ test('parseCsvToFileContent example', t => {
     'peter,42',
     'klaus,0'
   ]
-  let csv = `name, value\n`
-  csv += `peter,42\n`
-  csv += `klaus,0\n`
+  let csv = 'name, value\n'
+  csv += 'peter,42\n'
+  csv += 'klaus,0\n'
   t.is(parseCsvToFileContent(header, lines), csv)
 })
 

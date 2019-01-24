@@ -20,10 +20,12 @@ function getAgeString({year, month}) {
   if (!year || !month) {
     return '?'
   }
+
   let result = `${year}-`
   if (month < 10) {
     result += '0'
   }
+
   result += month
   return result
 }
@@ -84,10 +86,12 @@ function batteryAge(header, csvLines) {
       if (!percentages[i]) {
         continue
       }
+
       const ageInMonths = getAgeInMonths(monthHeader[i], age)
 
       rows[ageInMonths].push(percentages[i])
     }
+
     const maxLength = Math.max(...rows.map(o => o.length))
 
     for (let i = 0; i < rows.length; i++) {

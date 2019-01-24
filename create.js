@@ -7,13 +7,13 @@ const {readCsvFile, writeCsvFile} = require('./csv-files')
 const {batteryAge} = require('./battery-age')
 const {batteryHistory} = require('./battery-history')
 
+doIt()
 async function doIt() {
   const data = await readCsvFile('data.csv')
 
   await generateGraph(data, batteryAge, 'battery-age')
   await generateGraph(data, batteryHistory, 'battery-history')
 }
-doIt()
 
 async function generateGraph(data, func, name) {
   console.log('create', name)
