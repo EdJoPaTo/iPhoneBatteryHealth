@@ -1,7 +1,4 @@
-const childProcess = require('child_process')
-const util = require('util')
-
-const exec = util.promisify(childProcess.exec)
+const gnuplot = require('./gnuplot')
 
 const {readCsvFile, writeCsvFile} = require('./csv-files')
 const {batteryAge} = require('./battery-age')
@@ -17,9 +14,5 @@ async function generateGraph(data, func, name) {
   console.log('create', name)
   const output = func(data.header, data.csvLines)
   await writeCsvFile(`tmp/${name}.csv`, output.header, output.csvLines)
-  await runGnuplot(`${name}.gnuplot`)
-}
-
-async function runGnuplot(script) {
-  await exec(`gnuplot ${script}`)
+  await gnuplot.run(`${name}.gnuplot`)
 }
