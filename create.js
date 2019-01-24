@@ -1,6 +1,7 @@
 const fsPromise = require('fs').promises
 
 const {batteryAge} = require('./battery-age')
+const {batteryDate} = require('./battery-date')
 
 doIt()
 async function doIt() {
@@ -13,4 +14,6 @@ async function doIt() {
 
   console.log('create battery-age')
   await batteryAge(batteries)
+  console.log('create battery-date')
+  await batteryDate(batteries)
 }
