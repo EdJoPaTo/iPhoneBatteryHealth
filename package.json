@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/EdJoPaTo/iPhoneBatteryHealth#readme",
   "engines": {
-    "node": ">=11"
+    "node": ">=12"
   },
   "scripts": {
     "ava": "ava",
