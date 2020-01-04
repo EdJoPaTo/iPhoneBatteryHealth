@@ -1,7 +1,9 @@
+/* eslint unicorn/no-for-loop: warn */
+
 function parseCsvFromFileContent(content) {
   let preparedContent = content.trim()
 
-  while (preparedContent.indexOf('\n\n') >= 0) {
+  while (preparedContent.includes('\n\n')) {
     preparedContent = preparedContent.replace('\n\n', '\n')
   }
 
