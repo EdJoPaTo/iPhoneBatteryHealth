@@ -5,6 +5,8 @@ const {batteryDate} = require('./battery-date')
 
 doIt()
 async function doIt() {
+  await fsPromise.mkdir('tmp', {recursive: true})
+
   const data = JSON.parse(await fsPromise.readFile('data.json', 'utf8'))
   const batteries = data
     .flatMap(person => person.batteries.map(bat => {
