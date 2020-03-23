@@ -3,11 +3,11 @@ const util = require('util')
 
 const exec = util.promisify(childProcess.exec)
 
-async function run(script, params = []) {
+async function run(script, parameters = []) {
   let commandline = 'nice gnuplot '
-  if (params.length > 0) {
+  if (parameters.length > 0) {
     commandline += '-e "'
-    commandline += params.join(';')
+    commandline += parameters.join(';')
 
     commandline += '" '
   }

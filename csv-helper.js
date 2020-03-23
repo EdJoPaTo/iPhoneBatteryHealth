@@ -43,7 +43,7 @@ function simpleFlip(header, csvLines) {
   }
 
   const outputContent = allOutputLines
-    .map(lineArr => lineArr.join(', '))
+    .map(lineArray => lineArray.join(', '))
     .join('\n')
   return parseCsvFromFileContent(outputContent)
 }

@@ -1,9 +1,9 @@
-import test from 'ava'
-import {
+const test = require('ava')
+const {
   parseCsvFromFileContent,
   parseCsvToFileContent,
   simpleFlip
-} from './csv-helper'
+} = require('./csv-helper')
 
 test('parseCsvFromFileContent example', t => {
   let csv = 'name,value\n'

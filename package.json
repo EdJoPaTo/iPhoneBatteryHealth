@@ -26,9 +26,9 @@
     "json-stable-stringify": "^1.0.1"
   },
   "devDependencies": {
-    "ava": "^2.2.0",
+    "ava": "^3.5.1",
     "nyc": "^15.0.0",
-    "xo": "^0.25.3"
+    "xo": "^0.28.0"
   },
   "xo": {
     "space": true,
