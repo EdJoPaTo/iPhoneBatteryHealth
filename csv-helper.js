@@ -1,5 +1,3 @@
-/* eslint unicorn/no-for-loop: warn */
-
 function parseCsvFromFileContent(content) {
   let preparedContent = content.trim()
 
@@ -30,15 +28,15 @@ function simpleFlip(header, csvLines) {
   const allInputLines = [headerLine, ...csvLines]
   const allOutputLines = []
 
-  for (let i = 0; i < allInputLines.length; i++) {
-    const lineContent = allInputLines[i].split(',')
+  for (const inputLine of allInputLines) {
+    const lineContent = inputLine.split(',')
       .map(s => s.trim())
-    for (let j = 0; j < lineContent.length; j++) {
+    for (const [j, entry] of lineContent.entries()) {
       if (!allOutputLines[j]) {
         allOutputLines[j] = []
       }
 
-      allOutputLines[j].push(lineContent[j])
+      allOutputLines[j].push(entry)
     }
   }
 
