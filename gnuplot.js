@@ -1,7 +1,7 @@
 const childProcess = require('child_process')
-const util = require('util')
+const {promisify} = require('util')
 
-const exec = util.promisify(childProcess.exec)
+const exec = promisify(childProcess.exec)
 
 async function run(script, parameters = []) {
   let commandline = 'nice gnuplot '
