@@ -28,7 +28,7 @@
   "devDependencies": {
     "ava": "^3.5.1",
     "nyc": "^15.0.0",
-    "xo": "^0.35.0"
+    "xo": "^0.36.1"
   },
   "xo": {
     "space": true,
