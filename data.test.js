@@ -82,3 +82,19 @@ test('health between 0 and 100', t => {
 
   t.deepEqual(wrongValues, [])
 })
+
+test('warning is newer than battery age', t => {
+  const batteries = t.context.json
+    .flatMap(o => o.batteries)
+    .filter(o => o)
+    .filter(o => o.warningSince)
+  const badEntries = batteries
+    .filter(bat => {
+      const age = Date.parse(bat.age)
+      const warning = Date.parse(bat.warningSince)
+      return age > warning
+    })
+
+  t.log(badEntries)
+  t.deepEqual(badEntries, [])
+})
