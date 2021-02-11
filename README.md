@@ -1,5 +1,4 @@
 # iPhone Battery Health
-[![Build Status](https://travis-ci.com/EdJoPaTo/iPhoneBatteryHealth.svg?branch=master)](https://travis-ci.com/EdJoPaTo/iPhoneBatteryHealth)
 
 This repo collects and plots data about the iPhone Battery Health assumption.
 
