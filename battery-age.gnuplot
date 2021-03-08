@@ -2,7 +2,7 @@
 
 set datafile separator ","
 
-set term svg size 1000,800 dynamic
+set term svg size 2000,1200 dynamic
 set output "dist/battery-age.svg"
 
 set key top autotitle columnhead
@@ -20,10 +20,10 @@ set mxtics 4
 
 plot for [i=1:lines] "tmp/age-".i.".csv" using 1:2
 
-set term pdfcairo size 20cm,15cm
+set term pdfcairo size 40cm,20cm
 set output "dist/battery-age.pdf"
 replot
 
-set term pngcairo size 1000,800
+set term pngcairo size 2000,1200
 set output "dist/battery-age.png"
 replot
