@@ -1,4 +1,4 @@
-function parseCsvFromFileContent(content) {
+export function parseCsvFromFileContent(content) {
   let preparedContent = content.trim()
 
   while (preparedContent.includes('\n\n')) {
@@ -16,14 +16,14 @@ function parseCsvFromFileContent(content) {
   return {header, csvLines: preparedCsvLines}
 }
 
-function parseCsvToFileContent(header, csvLines) {
+export function parseCsvToFileContent(header, csvLines) {
   const headerLine = header.join(', ')
   const lines = [headerLine, ...csvLines]
   const content = lines.join('\n') + '\n'
   return content
 }
 
-function simpleFlip(header, csvLines) {
+export function simpleFlip(header, csvLines) {
   const headerLine = header.join(', ')
   const allInputLines = [headerLine, ...csvLines]
   const allOutputLines = []
@@ -44,10 +44,4 @@ function simpleFlip(header, csvLines) {
     .map(lineArray => lineArray.join(', '))
     .join('\n')
   return parseCsvFromFileContent(outputContent)
-}
-
-module.exports = {
-  parseCsvFromFileContent,
-  parseCsvToFileContent,
-  simpleFlip
 }

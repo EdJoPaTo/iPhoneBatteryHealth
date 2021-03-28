@@ -1,10 +1,10 @@
-const fsPromises = require('fs').promises
+import {readFile} from 'fs/promises'
 
-const test = require('ava')
-const stringify = require('json-stable-stringify')
+import test from 'ava'
+import stringify from 'json-stable-stringify'
 
 test.before(async t => {
-  const content = await fsPromises.readFile('data.json', 'utf8')
+  const content = await readFile('data.json', 'utf8')
   t.context.content = content
   t.context.json = JSON.parse(content)
 })

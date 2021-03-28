@@ -1,9 +1,9 @@
-const childProcess = require('child_process')
-const {promisify} = require('util')
+import * as childProcess from 'child_process'
+import {promisify} from 'util'
 
 const exec = promisify(childProcess.exec)
 
-async function run(script, parameters = []) {
+export async function run(script, parameters = []) {
   let commandline = 'nice gnuplot '
   if (parameters.length > 0) {
     commandline += '-e "'
@@ -15,8 +15,4 @@ async function run(script, parameters = []) {
   commandline += script
 
   await exec(commandline)
-}
-
-module.exports = {
-  run
 }

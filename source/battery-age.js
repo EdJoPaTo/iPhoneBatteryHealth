@@ -1,5 +1,5 @@
-const gnuplot = require('./gnuplot')
-const {writeCsvFile} = require('./csv-files')
+import * as gnuplot from './gnuplot.js'
+import {writeCsvFile} from './csv-files.js'
 
 const MONTH_IN_SECONDS = 60 * 60 * 24 * 30
 
@@ -22,7 +22,7 @@ async function generateBatteryCsvFile(battery, filename) {
   await writeCsvFile(filename, header, lines)
 }
 
-async function batteryAge(batteries) {
+export async function batteryAge(batteries) {
   const sortedBatteries = batteries
     // Newest Battery first
     .sort((a, b) => Date.parse(b.age) - Date.parse(a.age))
@@ -30,11 +30,7 @@ async function batteryAge(batteries) {
   await Promise.all(
     sortedBatteries.map((o, i) => generateBatteryCsvFile(o, `tmp/age-${i + 1}.csv`))
   )
-  await gnuplot.run('battery-age.gnuplot', [
+  await gnuplot.run('source/battery-age.gnuplot', [
     `lines=${sortedBatteries.length}`
   ])
-}
-
-module.exports = {
-  batteryAge
 }

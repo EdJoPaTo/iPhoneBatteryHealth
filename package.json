@@ -1,7 +1,8 @@
 {
   "private": true,
   "version": "1.0.0",
-  "main": "create.js",
+  "type": "module",
+  "main": "source/create.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "start": "node create.js",
+    "start": "node source/create.js",
     "test": "xo && nyc ava"
   },
   "dependencies": {
