@@ -25,10 +25,13 @@
   "devDependencies": {
     "ava": "^3.5.1",
     "nyc": "^15.0.0",
-    "xo": "^0.39.1"
+    "xo": "^0.40.1"
   },
   "xo": {
     "space": true,
-    "semicolon": false
+    "semicolon": false,
+    "rules": {
+      "unicorn/prefer-node-protocol": "off"
+    }
   }
 }
