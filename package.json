@@ -1,23 +1,14 @@
 {
   "private": true,
   "version": "1.0.0",
-  "type": "module",
-  "main": "source/create.js",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EdJoPaTo/iPhoneBatteryHealth.git"
-  },
-  "bugs": {
-    "url": "https://github.com/EdJoPaTo/iPhoneBatteryHealth/issues"
-  },
-  "homepage": "https://github.com/EdJoPaTo/iPhoneBatteryHealth#readme",
-  "engines": {
-    "node": ">=14"
-  },
   "scripts": {
     "start": "node source/create.js",
     "test": "xo && nyc ava"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=14"
   },
   "dependencies": {
     "json-stable-stringify": "^1.0.1"
