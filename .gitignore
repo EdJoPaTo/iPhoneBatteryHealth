@@ -1,10 +1,13 @@
+.nyc_output
+/*-*.*.*.tgz
+coverage
+dist
+node_modules
+yarn.lock
+
 *.pdf
 *.png
 tmp/
-
-# node
-node_modules
-.nyc_output
 
 # Libre Office lock file
 .~lock.*#
