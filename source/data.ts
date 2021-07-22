@@ -21,7 +21,7 @@ export function allBatteries(persons: readonly Person[]): BatteryWithPerson[] {
     const name = p._name
     const bat = p.batteries.map((b): BatteryWithPerson => ({
       ...b,
-      person: name
+      person: name,
     }))
 
     result.push(...bat)

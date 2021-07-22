@@ -35,7 +35,7 @@ test('everyone has a battery', t => {
 test('every battery has age and device', t => {
   const personWithBatteryWithoutAgeOrDevice = t.context.json
     .filter(o => (o.batteries || [])
-      .some(b => !b.age || !b.device)
+      .some(b => !b.age || !b.device),
     )
 
   t.log(personWithBatteryWithoutAgeOrDevice)
@@ -45,7 +45,7 @@ test('every battery has age and device', t => {
 test('every battery has at least one health entry', t => {
   const personWithoutBatteryHealthEntry = t.context.json
     .filter(o => (o.batteries || [])
-      .some(b => Object.keys(b.health || {}).length === 0)
+      .some(b => Object.keys(b.health || {}).length === 0),
     )
 
   t.log(personWithoutBatteryHealthEntry)

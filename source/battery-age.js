@@ -6,7 +6,7 @@ const MONTH_IN_SECONDS = 60 * 60 * 24 * 30
 async function generateBatteryCsvFile(battery, filename) {
   const header = [
     'Age',
-    `(${battery.person}) ${battery.device} ${battery.age.slice(0, 7)}`
+    `(${battery.person}) ${battery.device} ${battery.age.slice(0, 7)}`,
   ]
 
   const ageTimestamp = Date.parse(battery.age)
@@ -28,9 +28,9 @@ export async function batteryAge(batteries) {
     .sort((a, b) => Date.parse(b.age) - Date.parse(a.age))
 
   await Promise.all(
-    sortedBatteries.map((o, i) => generateBatteryCsvFile(o, `tmp/age-${i + 1}.csv`))
+    sortedBatteries.map((o, i) => generateBatteryCsvFile(o, `tmp/age-${i + 1}.csv`)),
   )
   await gnuplot.run('source/battery-age.gnuplot', [
-    `lines=${sortedBatteries.length}`
+    `lines=${sortedBatteries.length}`,
   ])
 }

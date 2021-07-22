@@ -1,6 +1,5 @@
 {
   "private": true,
-  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "start": "node source/create.js",
@@ -16,7 +15,7 @@
   "devDependencies": {
     "ava": "^3.5.1",
     "nyc": "^15.0.0",
-    "xo": "^0.40.3"
+    "xo": "^0.42.0"
   },
   "xo": {
     "space": true,

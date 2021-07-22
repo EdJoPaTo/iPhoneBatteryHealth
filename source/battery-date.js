@@ -4,7 +4,7 @@ import {writeCsvFile} from './csv-files.js'
 async function generateBatteryCsvFile(battery, filename) {
   const header = [
     'Date',
-    `(${battery.person}) ${battery.device} ${battery.age.slice(0, 7)}`
+    `(${battery.person}) ${battery.device} ${battery.age.slice(0, 7)}`,
   ]
 
   const lines = Object.keys(battery.health)
@@ -23,9 +23,9 @@ export async function batteryDate(batteries) {
     .sort((a, b) => Date.parse(b.age) - Date.parse(a.age))
 
   await Promise.all(
-    sortedBatteries.map((o, i) => generateBatteryCsvFile(o, `tmp/date-${i + 1}.csv`))
+    sortedBatteries.map((o, i) => generateBatteryCsvFile(o, `tmp/date-${i + 1}.csv`)),
   )
   await gnuplot.run('source/battery-date.gnuplot', [
-    `lines=${sortedBatteries.length}`
+    `lines=${sortedBatteries.length}`,
   ])
 }
