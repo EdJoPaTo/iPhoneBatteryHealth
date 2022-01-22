@@ -13,7 +13,7 @@
     "json-stable-stringify": "^1.0.1"
   },
   "devDependencies": {
-    "ava": "^3.5.1",
+    "ava": "^4.0.1",
     "nyc": "^15.0.0",
     "xo": "^0.47.0"
   },
