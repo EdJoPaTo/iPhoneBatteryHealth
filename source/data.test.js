@@ -55,7 +55,7 @@ test('every battery has at least one health entry', t => {
 test('health is newer than battery age', t => {
   const batteries = t.context.json
     .flatMap(o => o.batteries)
-    .filter(o => o)
+    .filter(Boolean)
   const badEntries = batteries
     .filter(bat => {
       const age = Date.parse(bat.age)
@@ -72,9 +72,9 @@ test('health is newer than battery age', t => {
 test('health between 0 and 100', t => {
   const healthPercentages = t.context.json
     .flatMap(o => o.batteries)
-    .filter(o => o)
+    .filter(Boolean)
     .map(o => o.health)
-    .filter(o => o)
+    .filter(Boolean)
     .flatMap(o => Object.values(o))
 
   const wrongValues = healthPercentages
@@ -86,7 +86,7 @@ test('health between 0 and 100', t => {
 test('warning is newer than battery age', t => {
   const batteries = t.context.json
     .flatMap(o => o.batteries)
-    .filter(o => o)
+    .filter(Boolean)
     .filter(o => o.warningSince)
   const badEntries = batteries
     .filter(bat => {
