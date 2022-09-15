@@ -26,7 +26,9 @@ async function generateBatteryCsvFile(battery: BatteryEntry, filename: string) {
   await Deno.writeTextFile(filename, content);
 }
 
-export async function batteryAge(batteries: readonly BatteryEntry[]) {
+export async function batteryAge(
+  batteries: readonly BatteryEntry[],
+): Promise<void> {
   const sortedBatteries = [...batteries]
     // Newest Battery first
     .sort((a, b) => Date.parse(b.age) - Date.parse(a.age));

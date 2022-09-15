@@ -1,4 +1,7 @@
-export async function run(script: string, paramenters: string[] = []) {
+export async function run(
+  script: string,
+  paramenters: string[] = [],
+): Promise<void> {
   const command: string[] = [
     "nice",
     "gnuplot",
