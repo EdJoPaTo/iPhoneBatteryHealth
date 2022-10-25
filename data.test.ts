@@ -25,6 +25,7 @@ const batterySchema = {
         "12mini",
         "12ProMax",
         "13",
+				"13Pro",
         "13ProMax",
         "14",
         "14Pro",
