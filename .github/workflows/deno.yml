@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  denofmt-and-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: denoland/setup-deno@v1
@@ -13,11 +13,16 @@ jobs:
             deno-version: v1.x
       - uses: actions/checkout@v3
 
-      - name: Lint
-        run: deno lint
+      - run: deno lint
+      - run: deno fmt --check
 
-      - name: Check format
-        run: deno fmt --check
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: denoland/setup-deno@v1
+        with:
+            deno-version: v1.x
+      - uses: actions/checkout@v3
 
       - name: Cache dependencies
         run: deno cache *.ts
