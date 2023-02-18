@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: denoland/setup-deno@v1
         with:
-            deno-version: v1.x
+          deno-version: v1.x
       - uses: actions/checkout@v3
 
       - run: deno lint
@@ -21,14 +21,9 @@ jobs:
     steps:
       - uses: denoland/setup-deno@v1
         with:
-            deno-version: v1.x
+          deno-version: v1.x
       - uses: actions/checkout@v3
 
-      - name: Cache dependencies
-        run: deno cache *.ts
-
-      - name: Run check
-        run: deno check *.ts
-
-      - name: Run tests
-        run: deno test --allow-read
+      - run: deno cache *.ts
+      - run: deno check *.ts
+      - run: deno test --allow-read
