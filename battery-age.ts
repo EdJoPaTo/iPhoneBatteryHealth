@@ -1,4 +1,4 @@
-import * as csv from "https://deno.land/std@0.155.0/encoding/csv.ts";
+import * as csv from "https://deno.land/std@0.167.0/encoding/csv.ts";
 import type { BatteryEntry } from "./data.ts";
 import * as gnuplot from "./gnuplot.ts";
 
@@ -14,11 +14,10 @@ async function generateBatteryCsvFile(battery: BatteryEntry, filename: string) {
   ];
 
   const ageTimestamp = Date.parse(battery.age);
-  const lines = Object.keys(battery.health).map((key) => {
+  const lines = Object.entries(battery.health).map(([key, value]) => {
     const timestamp = Date.parse(key);
     const ageInSeconds = (timestamp - ageTimestamp) / 1000;
     const ageInMonths = ageInSeconds / MONTH_IN_SECONDS;
-    const value = battery.health[key];
     return [String(ageInMonths), String(value)];
   });
 
