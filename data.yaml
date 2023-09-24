@@ -122,12 +122,23 @@ batteries:
     health:
       '2022-12-10': 100
       '2023-02-18': 100
-  - owner: Benjamin
+  - owner: Mandy
     device: 13Pro
     age: '2021-10-15'
     health:
       '2022-11-14': 95
       '2023-02-19': 93
+      '2023-09-24': 90
+  - owner: Benjamin
+    device: 15Pro
+    age: '2023-09-25'
+    health:
+      '2023-09-25': 100
+  - owner: Benjamin
+    device: watch7big
+    age: '2021-11-06'
+    health:
+      '2023-09-24': 85
   - owner: Björn
     device: SE
     age: '2016-08-15'
