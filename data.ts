@@ -24,10 +24,6 @@ export const DEVICES = [
   "13ProMax",
   "14",
   "14Pro",
-  "15",
-  "15Plus",
-  "15Pro",
-  "15ProMax",
   "watch3big",
   "watch3small",
   "watch4big",
@@ -40,14 +36,10 @@ export const DEVICES = [
   "watch7small",
   "watch8big",
   "watch8small",
-  "watch9big",
-  "watch9small",
   "watchSE1big",
   "watchSE1small",
   "watchSE2big",
   "watchSE2small",
-  "watchUltra",
-  "watchUltra2",
 ] as const;
 
 export type BatteryEntry = {
