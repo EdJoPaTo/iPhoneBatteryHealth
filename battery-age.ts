@@ -1,4 +1,4 @@
-import * as csv from "https://deno.land/std@0.167.0/encoding/csv.ts";
+import * as csv from "jsr:@std/csv@1";
 import type { BatteryEntry } from "./data.ts";
 import * as gnuplot from "./gnuplot.ts";
 

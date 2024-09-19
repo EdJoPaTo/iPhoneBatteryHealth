@@ -1,4 +1,4 @@
-import * as yaml from "https://deno.land/std@0.167.0/encoding/yaml.ts";
+import * as yaml from "jsr:@std/yaml@1";
 
 type ISO_DATE = `${number}-${number}-${number}`;
 

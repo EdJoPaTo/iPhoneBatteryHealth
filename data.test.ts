@@ -1,9 +1,6 @@
-import Ajv from "https://esm.sh/ajv@8.11.0";
+import { assert, assertEquals } from "jsr:@std/assert@1";
+import { Ajv } from "npm:ajv@8";
 import * as data from "./data.ts";
-import {
-  assert,
-  assertEquals,
-} from "https://deno.land/std@0.167.0/testing/asserts.ts";
 
 const ISO_DAY_PATTERN = "^\\d{4}-\\d{2}-\\d{2}$";
 

@@ -1,6 +1,5 @@
 {
   // https://deno.land/manual/getting_started/configuration_file
-  "lock": false,
   // https://deno.land/manual/advanced/typescript/configuration
   // https://www.typescriptlang.org/tsconfig/
   "compilerOptions": {
@@ -10,6 +9,9 @@
     "noUncheckedIndexedAccess": true,
     "useUnknownInCatchVariables": true
   },
+  "exclude": [
+    "./node_modules/"
+  ],
   "lint": {
     "rules": {
       // https://lint.deno.land/?all=on
