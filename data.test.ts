@@ -28,7 +28,7 @@ const batterySchema = {
 const ajv = new Ajv();
 const validate = ajv.compile(batterySchema);
 
-const batteries = await data.load();
+const batteries = await data.load("data.yaml");
 for (const battery of batteries) {
   Deno.test(`${battery.owner} ${battery.device} ${battery.age}`, () => {
     if (!validate(battery)) {

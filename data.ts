@@ -49,10 +49,11 @@ export const DEVICES = [
   "watchUltra",
   "watchUltra2",
 ] as const;
+export type Device = typeof DEVICES[number];
 
 export type BatteryEntry = {
   readonly owner: string;
-  readonly device: typeof DEVICES[number];
+  readonly device: Device;
   readonly age: ISO_DATE;
   readonly warningSince?: ISO_DATE;
   readonly health: Record<ISO_DATE, number>;
@@ -60,7 +61,7 @@ export type BatteryEntry = {
 
 type FileData = { readonly batteries: BatteryEntry[] };
 
-export async function load(): Promise<BatteryEntry[]> {
-  const content = await Deno.readTextFile("data.yaml");
+export async function load(path: string): Promise<BatteryEntry[]> {
+  const content = await Deno.readTextFile(path);
   return (yaml.parse(content) as FileData).batteries;
 }
