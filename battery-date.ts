@@ -2,7 +2,10 @@ import * as csv from "jsr:@std/csv@1";
 import type { BatteryEntry } from "./data.ts";
 import * as gnuplot from "./gnuplot.ts";
 
-async function generateBatteryCsvFile(battery: BatteryEntry, filename: string) {
+async function generateBatteryCsvFile(
+  battery: Readonly<BatteryEntry>,
+  filename: string,
+) {
   const columns: csv.ColumnDetails[] = [
     { header: "Date", prop: 0 },
     {
@@ -21,7 +24,7 @@ async function generateBatteryCsvFile(battery: BatteryEntry, filename: string) {
 }
 
 export async function batteryDate(
-  batteries: readonly BatteryEntry[],
+  batteries: ReadonlyArray<Readonly<BatteryEntry>>,
 ): Promise<void> {
   const sortedBatteries = [...batteries]
     // Newest Battery first

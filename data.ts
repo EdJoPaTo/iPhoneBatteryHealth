@@ -61,8 +61,8 @@ export type BatteryEntry = {
   readonly owner: string;
   readonly device: Device;
   readonly age: ISO_DATE;
-  readonly warningSince?: ISO_DATE;
-  readonly health: Record<ISO_DATE, number>;
+  warningSince?: ISO_DATE;
+  health: Record<ISO_DATE, number>;
 };
 
 type FileData = { readonly batteries: BatteryEntry[] };
@@ -70,4 +70,8 @@ type FileData = { readonly batteries: BatteryEntry[] };
 export async function load(path: string): Promise<BatteryEntry[]> {
   const content = await Deno.readTextFile(path);
   return (yaml.parse(content) as FileData).batteries;
+}
+
+export async function save(path: string, content: FileData): Promise<void> {
+  await Deno.writeTextFile(path, yaml.stringify(content));
 }

@@ -4,7 +4,10 @@ import * as gnuplot from "./gnuplot.ts";
 
 const MONTH_IN_SECONDS = 60 * 60 * 24 * 30;
 
-async function generateBatteryCsvFile(battery: BatteryEntry, filename: string) {
+async function generateBatteryCsvFile(
+  battery: Readonly<BatteryEntry>,
+  filename: string,
+) {
   const columns: csv.ColumnDetails[] = [
     { header: "Age", prop: 0 },
     {
@@ -26,7 +29,7 @@ async function generateBatteryCsvFile(battery: BatteryEntry, filename: string) {
 }
 
 export async function batteryAge(
-  batteries: readonly BatteryEntry[],
+  batteries: ReadonlyArray<Readonly<BatteryEntry>>,
 ): Promise<void> {
   const sortedBatteries = [...batteries]
     // Newest Battery first
