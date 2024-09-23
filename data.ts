@@ -1,6 +1,6 @@
 import * as yaml from "jsr:@std/yaml@1";
 
-type ISO_DATE = `${number}-${number}-${number}`;
+export type IsoDate = `${number}-${number}-${number}`;
 
 export const DEVICES = [
   "SE",
@@ -60,9 +60,9 @@ export type Device = typeof DEVICES[number];
 export type BatteryEntry = {
   readonly owner: string;
   readonly device: Device;
-  readonly age: ISO_DATE;
-  warningSince?: ISO_DATE;
-  health: Record<ISO_DATE, number>;
+  readonly age: IsoDate;
+  warningSince?: IsoDate;
+  health: Record<IsoDate, number>;
 };
 
 type FileData = { readonly batteries: BatteryEntry[] };
