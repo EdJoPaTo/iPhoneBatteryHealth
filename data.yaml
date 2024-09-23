@@ -1,6 +1,6 @@
 batteries:
   - owner: Alma
-    device: '6'
+    device: iPhone6
     age: '2014-11-15'
     health:
       '2018-05-25': 86
@@ -11,7 +11,7 @@ batteries:
       '2018-10-25': 86
       '2018-11-26': 86
   - owner: Alma
-    device: XR
+    device: iPhoneXR
     age: '2018-11-15'
     warningSince: '2021-10-15'
     health:
@@ -59,7 +59,7 @@ batteries:
     health:
       '2022-11-14': 100
   - owner: Anika
-    device: '7'
+    device: iPhone7
     age: '2018-01-15'
     health:
       '2018-05-25': 100
@@ -74,7 +74,7 @@ batteries:
       '2019-02-20': 92
       '2019-03-21': 90
   - owner: Anika
-    device: '8'
+    device: iPhone8
     age: '2019-01-01'
     warningSince: '2020-12-28'
     health:
@@ -117,20 +117,20 @@ batteries:
       '2022-10-10': 79
       '2022-11-16': 77
   - owner: Anika
-    device: '13mini'
+    device: iPhone13mini
     age: '2022-11-28'
     health:
       '2022-12-10': 100
       '2023-02-18': 100
   - owner: Mandy
-    device: 13Pro
+    device: iPhone13Pro
     age: '2021-10-15'
     health:
       '2022-11-14': 95
       '2023-02-19': 93
       '2023-09-24': 90
   - owner: Benjamin
-    device: 15Pro
+    device: iPhone15Pro
     age: '2023-09-25'
     health:
       '2023-09-25': 100
@@ -140,7 +140,7 @@ batteries:
     health:
       '2023-09-24': 85
   - owner: Björn
-    device: SE
+    device: iPhoneSE
     age: '2016-08-15'
     health:
       '2018-05-25': 92
@@ -184,7 +184,7 @@ batteries:
       '2022-11-14': 87
       '2023-02-19': 87
   - owner: Björn
-    device: SE2
+    device: iPhoneSE2
     age: '2020-09-29'
     warningSince: '2022-09-16'
     health:
@@ -217,7 +217,7 @@ batteries:
       '2022-11-14': 78
       '2023-02-19': 78
   - owner: Christian B
-    device: '6'
+    device: iPhone6
     age: '2014-09-15'
     health:
       '2018-05-25': 73
@@ -228,7 +228,7 @@ batteries:
       '2018-10-25': 73
       '2018-11-26': 73
   - owner: Christian B
-    device: '6'
+    device: iPhone6
     age: '2018-12-15'
     health:
       '2018-12-22': 100
@@ -275,13 +275,13 @@ batteries:
       '2022-08-01': 90
       '2022-09-19': 90
   - owner: Christian B
-    device: '8'
+    device: iPhone8
     age: '2022-10-20'
     health:
       '2022-11-14': 100
       '2023-02-19': 98
   - owner: Christian S
-    device: 6S
+    device: iPhone6S
     age: '2016-10-15'
     health:
       '2018-05-25': 91
@@ -300,7 +300,7 @@ batteries:
       '2020-01-22': 88
       '2020-03-28': 86
   - owner: Christian S
-    device: '8'
+    device: iPhone8
     age: '2019-06-01'
     health:
       '2019-06-23': 100
@@ -341,14 +341,14 @@ batteries:
       '2022-08-01': 87
       '2022-09-15': 87
   - owner: Christian S
-    device: '13'
+    device: iPhone13
     age: '2022-10-05'
     health:
       '2022-10-05': 100
       '2022-11-14': 100
       '2023-02-19': 99
   - owner: Christoph
-    device: X
+    device: iPhoneX
     age: '2018-04-15'
     health:
       '2018-05-25': 100
@@ -413,7 +413,7 @@ batteries:
       '2022-11-14': 100
       '2023-02-19': 100
   - owner: Christoph
-    device: 12mini
+    device: iPhone12mini
     age: '2020-11-17'
     health:
       '2020-11-22': 100
@@ -437,7 +437,7 @@ batteries:
       '2022-08-01': 83
       '2022-09-15': 83
   - owner: Edgar
-    device: '8'
+    device: iPhone8
     age: '2017-09-15'
     health:
       '2018-05-25': 98
@@ -448,7 +448,7 @@ batteries:
       '2018-10-25': 89
       '2018-11-26': 89
   - owner: Patrick
-    device: '8'
+    device: iPhone8
     age: '2018-12-07'
     warningSince: '2020-12-22'
     health:
@@ -494,7 +494,7 @@ batteries:
       '2022-08-03': 76
       '2022-09-15': 76
   - owner: Patrick
-    device: 11Pro
+    device: iPhone11Pro
     age: '2019-09-20'
     health:
       '2019-09-22': 100
@@ -537,7 +537,7 @@ batteries:
       '2022-09-19': 82
       '2023-02-19': 82
   - owner: Edgar
-    device: 14Pro
+    device: iPhone14Pro
     age: '2022-09-16'
     health:
       '2022-10-25': 100
@@ -578,7 +578,7 @@ batteries:
       '2023-02-18': 80
       '2023-03-24': 80
   - owner: Fabian
-    device: '7'
+    device: iPhone7
     age: '2017-02-15'
     health:
       '2018-05-25': 88
@@ -590,7 +590,7 @@ batteries:
       '2018-11-26': 84
       '2018-12-22': 84
   - owner: Fabian
-    device: XR
+    device: iPhoneXR
     age: '2019-01-22'
     health:
       '2019-01-22': 100
@@ -598,7 +598,7 @@ batteries:
       '2019-04-26': 99
       '2019-06-27': 97
   - owner: Hannes
-    device: 8+
+    device: iPhone8+
     age: '2017-09-15'
     health:
       '2018-05-25': 96
@@ -612,7 +612,7 @@ batteries:
       '2019-01-22': 89
       '2019-02-20': 89
   - owner: Hannes
-    device: XR
+    device: iPhoneXR
     age: '2019-03-01'
     health:
       '2019-03-21': 100
@@ -680,7 +680,7 @@ batteries:
       '2022-11-14': 86
       '2023-02-19': 81
   - owner: Hannes
-    device: '13'
+    device: iPhone13
     age: '2022-03-18'
     health:
       '2022-03-22': 100
@@ -690,7 +690,7 @@ batteries:
       '2022-11-14': 100
       '2023-02-19': 94
   - owner: Jonas
-    device: '7'
+    device: iPhone7
     age: '2017-02-15'
     health:
       '2018-05-25': 88
@@ -701,14 +701,14 @@ batteries:
       '2018-10-25': 86
       '2018-11-26': 84
   - owner: Jonas
-    device: '7'
+    device: iPhone7
     age: '2018-12-15'
     health:
       '2018-12-22': 100
       '2019-01-22': 98
       '2019-02-20': 98
   - owner: Jonas
-    device: XS
+    device: iPhoneXS
     age: '2019-03-12'
     health:
       '2019-03-30': 100
@@ -767,14 +767,14 @@ batteries:
       '2022-03-23': 90
       '2022-09-15': 90
   - owner: Jonas
-    device: XS
+    device: iPhoneXS
     age: '2022-05-11'
     health:
       '2022-05-22': 100
       '2022-08-01': 100
       '2022-09-15': 99
   - owner: Malte
-    device: X
+    device: iPhoneX
     age: '2017-12-15'
     health:
       '2018-05-25': 100
@@ -805,7 +805,7 @@ batteries:
       '2022-02-21': 90
       '2022-03-25': 88
   - owner: Malte
-    device: 12ProMax
+    device: iPhone12ProMax
     age: '2020-12-09'
     health:
       '2020-12-22': 100
@@ -822,7 +822,7 @@ batteries:
       '2022-02-21': 88
       '2022-03-25': 88
   - owner: Max
-    device: X
+    device: iPhoneX
     age: '2017-12-15'
     warningSince: '2022-03-22'
     health:
@@ -879,7 +879,7 @@ batteries:
       '2022-11-14': 78
       '2023-02-19': 77
   - owner: Miro
-    device: '7'
+    device: iPhone7
     age: '2016-10-15'
     health:
       '2018-05-25': 84
@@ -888,7 +888,7 @@ batteries:
       '2018-08-26': 84
       '2018-09-24': 84
   - owner: Miro
-    device: XS
+    device: iPhoneXS
     age: '2018-10-15'
     health:
       '2018-10-25': 100
@@ -917,7 +917,7 @@ batteries:
       '2020-09-22': 85
       '2020-10-22': 85
   - owner: Miro
-    device: XS
+    device: iPhoneXS
     age: '2020-11-01'
     health:
       '2020-11-22': 99
@@ -964,7 +964,7 @@ batteries:
       '2022-03-22': 88
       '2022-11-14': 87
   - owner: Robert
-    device: 8+
+    device: iPhone8+
     age: '2017-09-15'
     health:
       '2018-05-25': 95
@@ -972,7 +972,7 @@ batteries:
       '2018-07-25': 91
       '2018-08-26': 90
   - owner: Robert
-    device: 8+
+    device: iPhone8+
     age: '2018-09-15'
     health:
       '2018-09-24': 100
@@ -1006,7 +1006,7 @@ batteries:
       '2021-02-22': 84
       '2021-03-08': 84
   - owner: Robert
-    device: 8+
+    device: iPhone8+
     age: '2021-03-17'
     health:
       '2021-03-23': 100
@@ -1047,7 +1047,7 @@ batteries:
       '2022-11-14': 80
       '2023-03-22': 78
   - owner: Robert
-    device: 13ProMax
+    device: iPhone13ProMax
     age: '2021-09-24'
     health:
       '2021-10-22': 100
@@ -1063,7 +1063,7 @@ batteries:
       '2022-10-27': 91
       '2022-11-14': 91
   - owner: Silvan
-    device: '11'
+    device: iPhone11
     age: '2020-08-13'
     health:
       '2020-08-22': 100
@@ -1089,14 +1089,14 @@ batteries:
       '2022-05-22': 89
       '2022-08-01': 87
   - owner: Silvan
-    device: '13Pro'
+    device: iPhone13Pro
     age: '2022-09-08'
     health:
       '2022-09-19': 100
       '2022-11-14': 100
       '2023-02-19': 100
   - owner: Roland
-    device: XR
+    device: iPhoneXR
     age: '2019-01-23'
     health:
       '2019-02-20': 100
@@ -1143,7 +1143,7 @@ batteries:
       '2022-11-14': 87
       '2023-02-19': 87
   - owner: Tobias
-    device: '13'
+    device: iPhone13
     age: '2022-07-25'
     health:
       '2022-08-01': 100
@@ -1151,7 +1151,7 @@ batteries:
       '2022-11-14': 100
       '2023-02-19': 100
   - owner: Wiebke
-    device: '6'
+    device: iPhone6
     age: '2017-08-15'
     health:
       '2018-05-25': 88
@@ -1184,7 +1184,7 @@ batteries:
       '2020-09-22': 84
       '2020-10-22': 84
   - owner: Wiebke
-    device: 12mini
+    device: iPhone12mini
     age: '2020-11-13'
     health:
       '2020-11-22': 100
