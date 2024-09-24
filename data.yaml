@@ -1101,7 +1101,8 @@ batteries:
   - owner: Silvan
     device: iPhone15Pro
     age: '2024-03-15'
-    health: []
+    health:
+      '2024-09-24': 97
   - owner: Roland
     device: iPhoneXR
     age: '2019-01-23'
