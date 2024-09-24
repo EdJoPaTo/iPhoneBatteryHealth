@@ -280,6 +280,7 @@ batteries:
     health:
       '2022-11-14': 100
       '2023-02-19': 98
+      '2024-09-24': 81
   - owner: Christian S
     device: iPhone6S
     age: '2016-10-15'
