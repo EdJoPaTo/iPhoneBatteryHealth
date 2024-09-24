@@ -693,6 +693,11 @@ batteries:
       '2022-09-19': 100
       '2022-11-14': 100
       '2023-02-19': 94
+  - owner: Hannes
+    device: iPhone15ProMax
+    age: '2023-10-15'
+    health:
+      '2024-09-24': 98
   - owner: Jonas
     device: iPhone7
     age: '2017-02-15'
