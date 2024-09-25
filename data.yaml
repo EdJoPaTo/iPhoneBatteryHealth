@@ -887,6 +887,11 @@ batteries:
       '2022-09-19': 78
       '2022-11-14': 78
       '2023-02-19': 77
+  - owner: Max
+    device: iPhone15Pro
+    age: '2023-10-15'
+    health:
+      '2024-09-25': 98
   - owner: Miro
     device: iPhone7
     age: '2016-10-15'
