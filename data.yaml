@@ -185,7 +185,7 @@ batteries:
       '2023-02-19': 87
       '2024-09-26': 82
   - owner: Björn
-    device: iPhoneSE2
+    device: iPhoneX
     age: '2020-09-29'
     warningSince: '2022-09-16'
     health:
