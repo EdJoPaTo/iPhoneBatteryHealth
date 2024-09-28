@@ -416,6 +416,7 @@ batteries:
     health:
       '2022-11-14': 100
       '2023-02-19': 100
+      '2024-09-28': 89
   - owner: Christoph
     device: iPhone12mini
     age: '2020-11-17'
