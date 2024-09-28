@@ -1250,3 +1250,8 @@ batteries:
     age: '2022-09-15'
     health:
       '2024-09-28': 85
+  - owner: Lisa
+    device: iPhone13mini
+    age: '2022-05-28'
+    health:
+      '2024-09-28': 88
