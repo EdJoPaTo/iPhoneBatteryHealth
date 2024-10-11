@@ -990,7 +990,7 @@ batteries:
     device: iPhone16ProMax
     age: '2024-10-08'
     health:
-      '2024-10-12':100
+      '2024-10-12': 100
   - owner: Robert
     device: iPhone8+
     age: '2017-09-15'
