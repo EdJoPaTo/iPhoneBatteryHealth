@@ -987,7 +987,7 @@ batteries:
       '2022-03-22': 88
       '2022-11-14': 87
   - owner: Miro
-    device: iPhone 16 Pro Max
+    device: iPhone16ProMax
     age: '2024-10-08'
     health:
   - owner: Robert
