@@ -552,7 +552,6 @@ batteries:
       '2023-02-18': 100
       '2023-03-24': 100
       '2024-09-23': 85
-      '2024-10-08': 83
   - owner: Edgar
     device: watch5small
     age: '2019-09-20'
@@ -587,7 +586,6 @@ batteries:
       '2023-02-18': 80
       '2023-03-24': 80
       '2024-09-23': 72
-      '2024-10-08': 72
   - owner: Fabian
     device: iPhone7
     age: '2017-02-15'
@@ -988,6 +986,11 @@ batteries:
       '2022-02-22': 89
       '2022-03-22': 88
       '2022-11-14': 87
+  - owner: Miro
+    device: iPhone16ProMax
+    age: '2024-10-08'
+    health:
+      '2024-10-12': 100
   - owner: Robert
     device: iPhone8+
     age: '2017-09-15'
