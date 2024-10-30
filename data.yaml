@@ -712,6 +712,7 @@ batteries:
     health:
       '2024-09-24': 98
       '2024-09-25': 98
+      '2024-10-30': 96
   - owner: Jonas
     device: iPhone7
     age: '2017-02-15'
