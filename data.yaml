@@ -1142,6 +1142,7 @@ batteries:
     age: '2024-03-15'
     health:
       '2024-09-24': 97
+      '2024-11-15': 95
   - owner: Roland
     device: iPhoneXR
     age: '2019-01-23'
