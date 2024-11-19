@@ -1282,6 +1282,13 @@ batteries:
       '2023-02-19': 100
       '2024-09-24': 85
       '2024-11-15': 83
+  - owner: Wiebke
+    device: iPadAir11M2
+    age: '2024-05-15'
+    health:
+      '2024-09-19': 100
+    cycles:
+      '2024-09-19': 21
   - owner: lavalaempchen
     device: iPhone13mini
     age: '2022-09-15'

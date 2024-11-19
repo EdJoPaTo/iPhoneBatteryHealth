@@ -32,6 +32,12 @@ export const DEVICES = [
   "iPhone16Plus",
   "iPhone16Pro",
   "iPhone16ProMax",
+  "iPadPro11M4",
+  "iPadPro13M4",
+  "iPadAir11M2",
+  "iPadAir13M2",
+  "iPad10",
+  "iPadMiniA17",
   "watch3big",
   "watch3small",
   "watch4big",
@@ -63,6 +69,7 @@ export type BatteryEntry = {
   readonly age: IsoDate;
   warningSince?: IsoDate;
   health: Record<IsoDate, number>;
+  cycles?: Record<IsoDate, number>;
 };
 
 type FileData = { readonly batteries: BatteryEntry[] };
