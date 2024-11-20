@@ -136,6 +136,8 @@ batteries:
       '2023-09-25': 100
       '2024-10-07': 91
       '2024-11-15': 90
+    cycles:
+      '2024-11-20': 425
   - owner: Benjamin
     device: watch7big
     age: '2021-11-06'
