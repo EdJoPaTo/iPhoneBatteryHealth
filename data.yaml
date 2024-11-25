@@ -1298,6 +1298,7 @@ batteries:
     age: '2024-05-15'
     health:
       '2024-09-19': 100
+      '2024-11-25': 100
     cycles:
       '2024-09-19': 21
   - owner: lavalaempchen
