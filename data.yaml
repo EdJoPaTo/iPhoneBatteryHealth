@@ -1301,6 +1301,7 @@ batteries:
       '2024-11-25': 100
     cycles:
       '2024-09-19': 21
+      '2024-11-25': 39
   - owner: lavalaempchen
     device: iPhone13mini
     age: '2022-09-15'
