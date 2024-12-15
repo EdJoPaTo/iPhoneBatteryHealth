@@ -944,6 +944,7 @@ batteries:
     health:
       '2024-09-25': 98
       '2024-11-15': 97
+      '2024-12-15': 94
   - owner: Miro
     device: iPhone7
     age: '2016-10-15'
