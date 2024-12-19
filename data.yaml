@@ -752,6 +752,7 @@ batteries:
     cycles:
       '2024-11-20': 249
       '2024-12-15': 262
+      '2024-12-19': 265
   - owner: Jonas
     device: iPhone7
     age: '2017-02-15'
