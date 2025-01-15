@@ -589,6 +589,7 @@ batteries:
       '2025-01-15': 83
     cycles:
       '2024-11-20': 517
+      '2025-01-15': 548
   - owner: Edgar
     device: watch5small
     age: '2019-09-20'
