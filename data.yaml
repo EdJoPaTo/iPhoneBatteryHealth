@@ -1193,6 +1193,7 @@ batteries:
       '2025-01-15': 92
     cycles:
       '2024-12-15': 288
+      '2025-01-15': 317
   - owner: Roland
     device: iPhoneXR
     age: '2019-01-23'
