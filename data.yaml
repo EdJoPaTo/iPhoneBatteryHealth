@@ -440,7 +440,7 @@ batteries:
       '2022-08-01': 85
       '2022-09-15': 85
   - owner: Christoph
-    device: watch4big
+    device: watchUltra
     age: '2022-11-09'
     health:
       '2022-11-14': 100
