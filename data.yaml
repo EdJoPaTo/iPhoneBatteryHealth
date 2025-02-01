@@ -1277,6 +1277,11 @@ batteries:
       '2024-11-15': 91
       '2024-12-01': 91
       '2025-01-01': 91
+  - owner: Tobias
+    device: iPhone16
+    age: '2025-01-28'
+    health:
+      '2025-02-01': 100
   - owner: Wiebke
     device: iPhone6
     age: '2017-08-15'
