@@ -1282,6 +1282,8 @@ batteries:
     age: '2025-01-28'
     health:
       '2025-02-01': 100
+    cycles:
+      '2025-02-01': 3
   - owner: Wiebke
     device: iPhone6
     age: '2017-08-15'
