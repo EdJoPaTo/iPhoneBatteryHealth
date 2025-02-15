@@ -981,6 +981,7 @@ batteries:
     cycles:
       '2024-12-15': 306
       '2025-01-15': 324
+      '2025-02-15': 344
   - owner: Miro
     device: iPhone7
     age: '2016-10-15'
