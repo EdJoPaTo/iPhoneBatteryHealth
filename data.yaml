@@ -648,6 +648,7 @@ batteries:
     cycles:
       '2025-01-15': 1221
       '2025-02-15': 1240
+      '2025-03-15': 1257
   - owner: Fabian
     device: iPhone7
     age: '2017-02-15'
