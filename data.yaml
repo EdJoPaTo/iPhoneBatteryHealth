@@ -1421,6 +1421,12 @@ batteries:
       '2024-11-15': 80
       '2025-01-01': 80
       '2025-02-15': 79
+  - owner: lavalaempchen
+    device: iPadAir11M2
+    age: '2024-08-19'
+    health:
+      '2024-11-20': 99
+      '2025-03-23': 99
   - owner: Lisa
     device: iPhone13mini
     age: '2022-05-28'
