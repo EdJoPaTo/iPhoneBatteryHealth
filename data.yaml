@@ -1320,6 +1320,7 @@ batteries:
     cycles:
       '2025-02-01': 3
       '2025-03-01': 15
+      '2025-04-05': 34
   - owner: Wiebke
     device: iPhone6
     age: '2017-08-15'
