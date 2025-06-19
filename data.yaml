@@ -1460,6 +1460,7 @@ batteries:
       '2025-02-15': 59
       '2025-03-15': 66
       '2025-04-15': 74
+      '2025-06-19': 92
   - owner: lavalaempchen
     device: iPhone13mini
     age: '2022-09-15'
