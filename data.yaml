@@ -1446,6 +1446,7 @@ batteries:
   - owner: Wiebke
     device: watchSE2small
     age: '2022-09-16'
+    warningSince: '2025-07-15'
     health:
       '2022-11-14': 100
       '2023-02-19': 100
