@@ -1499,6 +1499,7 @@ batteries:
       '2024-11-15': 80
       '2025-01-01': 80
       '2025-02-15': 79
+      '2025-08-13': 77
   - owner: lavalaempchen
     device: iPadAir11M2
     age: '2024-08-19'
