@@ -476,6 +476,7 @@ batteries:
       '2025-04-15': 86
       '2025-06-16': 85
       '2025-07-16': 85
+      '2025-08-15': 85
   - owner: Christoph
     device: iPhone12mini
     age: '2020-11-17'
