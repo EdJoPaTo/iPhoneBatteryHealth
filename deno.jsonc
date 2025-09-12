@@ -29,7 +29,8 @@
         "no-slow-types",
         "no-sparse-arrays",
         "verbatim-module-syntax"
-      ]
+      ],
+      "exclude": ["no-import-prefix"]
     }
   }
 }
