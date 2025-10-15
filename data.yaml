@@ -631,7 +631,7 @@ batteries:
       '2025-07-15': 70
       '2025-08-15': 70
       '2025-09-15': 69
-  - owner: Edgar
+  - owner: Patrick
     device: iPhone14Pro
     age: '2022-09-16'
     health:
