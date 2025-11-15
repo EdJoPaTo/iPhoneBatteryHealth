@@ -1585,6 +1585,7 @@ batteries:
       '2025-07-15': 101
       '2025-08-15': 109
       '2025-09-15': 118
+      '2025-11-15': 132
   - owner: lavalaempchen
     device: iPhone13mini
     age: '2022-09-15'
