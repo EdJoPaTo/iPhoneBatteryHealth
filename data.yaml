@@ -526,6 +526,11 @@ batteries:
       '2022-05-22': 83
       '2022-08-01': 83
       '2022-09-15': 83
+  - owner: Christoph
+    device: iPhone17Pro
+    age: '2025-11-15'
+    health:
+      '2025-12-15': 100
   - owner: Edgar
     device: iPhone8
     age: '2017-09-15'
