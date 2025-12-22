@@ -1,4 +1,4 @@
-import * as csv from "jsr:@std/csv@1";
+import * as csv from "@std/csv";
 import type { BatteryEntry } from "./data.ts";
 import * as gnuplot from "./gnuplot.ts";
 

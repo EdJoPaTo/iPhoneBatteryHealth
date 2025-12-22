@@ -1,5 +1,7 @@
-import { assert, assertEquals } from "jsr:@std/assert@1";
-import { Ajv } from "npm:ajv@8";
+import { Ajv } from "ajv";
+import * as assert from "node:assert";
+import { deepStrictEqual } from "node:assert";
+import { test } from "node:test";
 import * as data from "./data.ts";
 
 const ISO_DAY_PATTERN = "^\\d{4}-\\d{2}-\\d{2}$";
@@ -40,32 +42,32 @@ for (const battery of batteries) {
   const namePrefix = `${battery.owner} ${battery.device} ${battery.age} `;
   const ageTimestamp = Date.parse(battery.age);
 
-  Deno.test(namePrefix + "schema", () => {
+  test(namePrefix + "schema", () => {
     if (!validate(battery)) {
       console.error(battery, validate.errors);
       throw new Error("does not comply to schema");
     }
   });
 
-  Deno.test(namePrefix + "health", () => {
+  test(namePrefix + "health", () => {
     const dates = Object.keys(battery.health);
     const sorted = [...dates].sort();
-    assertEquals(dates, sorted, "health dates are unsorted");
+    deepStrictEqual(dates, sorted, "health dates are unsorted");
 
     const dateTimestamps = dates.map((o) => Date.parse(o));
     const minHealthTimestamp = dateTimestamps.reduce((a, b) => Math.min(a, b));
-    assert(minHealthTimestamp >= ageTimestamp, "health is older than age");
+    assert.ok(minHealthTimestamp >= ageTimestamp, "health is older than age");
   });
 
-  Deno.test(namePrefix + "cycles", () => {
+  test(namePrefix + "cycles", () => {
     const dates = Object.keys(battery.cycles ?? {});
     if (dates.length === 0) return;
 
     const sorted = [...dates].sort();
-    assertEquals(dates, sorted, "cycle dates are unsorted");
+    deepStrictEqual(dates, sorted, "cycle dates are unsorted");
 
     const dateTimestamps = dates.map((o) => Date.parse(o));
     const minCycleTimestamp = dateTimestamps.reduce((a, b) => Math.min(a, b));
-    assert(minCycleTimestamp >= ageTimestamp, "cycle is older than age");
+    assert.ok(minCycleTimestamp >= ageTimestamp, "cycle is older than age");
   });
 }

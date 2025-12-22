@@ -1,3 +1,5 @@
+// This file is usable on its own without deno.json imports
+// deno-lint-ignore no-import-prefix
 import * as yaml from "jsr:@std/yaml@1";
 
 export type IsoDate = `${number}-${number}-${number}`;

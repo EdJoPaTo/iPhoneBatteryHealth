@@ -29,8 +29,11 @@
         "no-slow-types",
         "no-sparse-arrays",
         "verbatim-module-syntax"
-      ],
-      "exclude": ["no-import-prefix"]
+      ]
     }
+  },
+  "imports": {
+    "@std/csv": "jsr:@std/csv@^1",
+    "ajv": "npm:ajv@^8"
   }
 }
