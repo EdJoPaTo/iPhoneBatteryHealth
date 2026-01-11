@@ -2,14 +2,14 @@ export async function run(
   script: string,
   paramenters: string[] = [],
 ): Promise<void> {
-  const command: string[] = ["gnuplot"];
+  const args: string[] = [];
 
   if (paramenters.length > 0) {
-    command.push("-e", paramenters.join(";"));
+    args.push("-e", paramenters.join(";"));
   }
 
-  command.push(script);
+  args.push(script);
 
-  const p = new Deno.Command("nice", { args: command }).spawn();
+  const p = new Deno.Command("gnuplot", { args }).spawn();
   await p.status;
 }

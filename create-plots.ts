@@ -1,3 +1,5 @@
+#!/usr/bin/env -S deno run --allow-read=data --allow-write=tmp --allow-run=gnuplot
+
 import { batteryAge } from "./battery-age.ts";
 import { batteryDate } from "./battery-date.ts";
 import * as data from "./data.ts";
