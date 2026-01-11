@@ -4,7 +4,7 @@ import * as data from "./data.ts";
 
 await Deno.mkdir("tmp", { recursive: true });
 
-const batteries = await data.load("data.yaml");
+const batteries = await data.loadAll("data");
 
 console.log("create battery-age");
 await batteryAge(batteries);

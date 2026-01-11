@@ -10,7 +10,7 @@
     "useUnknownInCatchVariables": true
   },
   "exclude": [
-    "./data.yaml",
+    "./data/",
     "./dist/*.svg",
     "./node_modules/"
   ],

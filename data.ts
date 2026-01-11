@@ -1,6 +1,7 @@
 // This file is usable on its own without deno.json imports
 // deno-lint-ignore no-import-prefix
 import * as yaml from "jsr:@std/yaml@1";
+import { existsSync } from "node:fs";
 
 export type IsoDate = `${number}-${number}-${number}`;
 
@@ -93,11 +94,50 @@ export type BatteryEntry = {
 
 type FileData = { readonly batteries: BatteryEntry[] };
 
-export async function load(path: string): Promise<BatteryEntry[]> {
-  const content = await Deno.readTextFile(path);
-  return (yaml.parse(content) as FileData).batteries;
+export function devicePath(dataDirectory: string, device: Device): string {
+  return dataDirectory + "/" + device + ".yaml";
 }
 
-export async function save(path: string, content: FileData): Promise<void> {
+export async function loadAll(dataDirectory: string): Promise<BatteryEntry[]> {
+  const fromFiles = await Promise.all(
+    DEVICES.map((device) => load(dataDirectory, device)),
+  );
+  return fromFiles.flat();
+}
+
+export async function load(
+  dataDirectory: string,
+  device: Device,
+): Promise<BatteryEntry[]> {
+  const path = devicePath(dataDirectory, device);
+  if (!existsSync(path)) {
+    return [];
+  }
+
+  const content = await Deno.readTextFile(path);
+  return yaml.parse(content) as BatteryEntry[];
+}
+
+export async function saveAll(
+  dataDirectory: string,
+  content: readonly BatteryEntry[],
+): Promise<void> {
+  await Promise.all(DEVICES.map((device) => {
+    const filtered = content.filter((entry) => entry.device === device);
+    if (filtered.length === 0) return;
+    return save(dataDirectory, device, filtered);
+  }));
+}
+
+export async function save(
+  dataDirectory: string,
+  device: Device,
+  content: readonly BatteryEntry[],
+): Promise<void> {
+  if (content.some((entry) => entry.device !== device)) {
+    throw new Error("one of the entries is of the wrong device");
+  }
+
+  const path = devicePath(dataDirectory, device);
   await Deno.writeTextFile(path, yaml.stringify(content));
 }

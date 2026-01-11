@@ -34,12 +34,18 @@ const batterySchema = {
   additionalProperties: false,
 };
 
+function prefix(battery: data.BatteryEntry): string {
+  return `${battery.owner} ${battery.device} ${battery.age} `;
+}
+
 const ajv = new Ajv();
 const validate = ajv.compile(batterySchema);
 
-const batteries = await data.load("data.yaml");
+const batteries = await data.loadAll("data");
+batteries.sort((a, b) => prefix(a).localeCompare(prefix(b)));
+
 for (const battery of batteries) {
-  const namePrefix = `${battery.owner} ${battery.device} ${battery.age} `;
+  const namePrefix = prefix(battery);
   const ageTimestamp = Date.parse(battery.age);
 
   test(namePrefix + "schema", () => {
@@ -69,5 +75,23 @@ for (const battery of batteries) {
     const dateTimestamps = dates.map((o) => Date.parse(o));
     const minCycleTimestamp = dateTimestamps.reduce((a, b) => Math.min(a, b));
     assert.ok(minCycleTimestamp >= ageTimestamp, "cycle is older than age");
+  });
+}
+
+function isDevice(input: unknown): input is data.Device {
+  return typeof input === "string" &&
+    ((data.DEVICES as unknown) as string[]).includes(input);
+}
+
+for await (const dirEntry of Deno.readDir("data")) {
+  test("data directory " + dirEntry.name, () => {
+    assert.ok(dirEntry.isFile, "only files in the data directory");
+    const { name } = dirEntry;
+    assert.ok(name.endsWith(".yaml"), "only yaml files in the data directory");
+    const [device, extension] = name.split(".", 2);
+    assert.strictEqual(extension, "yaml");
+    if (!isDevice(device)) {
+      throw TypeError("filename is not in the DEVICES list");
+    }
   });
 }

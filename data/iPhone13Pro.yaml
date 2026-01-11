@@ -1,0 +1,14 @@
+- owner: Mandy
+  device: iPhone13Pro
+  age: '2021-10-15'
+  health:
+    '2022-11-14': 95
+    '2023-02-19': 93
+    '2023-09-24': 90
+- owner: Silvan
+  device: iPhone13Pro
+  age: '2022-09-08'
+  health:
+    '2022-09-19': 100
+    '2022-11-14': 100
+    '2023-02-19': 100
