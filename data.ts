@@ -92,8 +92,6 @@ export type BatteryEntry = {
   cycles?: Record<IsoDate, number>;
 };
 
-type FileData = { readonly batteries: BatteryEntry[] };
-
 export function devicePath(dataDirectory: string, device: Device): string {
   return dataDirectory + "/" + device + ".yaml";
 }
