@@ -3,9 +3,9 @@
   "specifiers": {
     "jsr:@std/bytes@^1.0.6": "1.0.6",
     "jsr:@std/csv@1": "1.0.6",
-    "jsr:@std/streams@^1.0.9": "1.0.16",
-    "jsr:@std/yaml@1": "1.0.10",
-    "npm:ajv@8": "8.17.1"
+    "jsr:@std/streams@^1.0.9": "1.1.0",
+    "jsr:@std/yaml@1": "1.1.0",
+    "npm:ajv@8": "8.20.0"
   },
   "jsr": {
     "@std/bytes@1.0.6": {
@@ -17,19 +17,19 @@
         "jsr:@std/streams"
       ]
     },
-    "@std/streams@1.0.16": {
-      "integrity": "85030627befb1767c60d4f65cb30fa2f94af1d6ee6e5b2515b76157a542e89c4",
+    "@std/streams@1.1.0": {
+      "integrity": "2f7024d841f343fd478afe0c958a3f0f068ef2a0d2bcc954f550f97ac1fa22e3",
       "dependencies": [
         "jsr:@std/bytes"
       ]
     },
-    "@std/yaml@1.0.10": {
-      "integrity": "245706ea3511cc50c8c6d00339c23ea2ffa27bd2c7ea5445338f8feff31fa58e"
+    "@std/yaml@1.1.0": {
+      "integrity": "fc1c5c63e05c4c5eb6118355f557958035d41940d6c29d35b306ef7155d6edb0"
     }
   },
   "npm": {
-    "ajv@8.17.1": {
-      "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+    "ajv@8.20.0": {
+      "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
       "dependencies": [
         "fast-deep-equal",
         "fast-uri",
