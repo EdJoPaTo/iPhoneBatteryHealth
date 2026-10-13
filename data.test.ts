@@ -1,7 +1,10 @@
-import { Ajv } from "ajv";
 import * as assert from "node:assert";
 import { deepStrictEqual } from "node:assert";
+import { readdir } from "node:fs/promises";
 import { test } from "node:test";
+
+import { Ajv } from "ajv";
+
 import * as data from "./data.ts";
 
 const ISO_DAY_PATTERN = "^\\d{4}-\\d{2}-\\d{2}$";
@@ -83,7 +86,8 @@ function isDevice(input: unknown): input is data.Device {
     ((data.DEVICES as unknown) as string[]).includes(input);
 }
 
-for await (const dirEntry of Deno.readDir("data")) {
+const dirEntries = await readdir("data", { withFileTypes: true });
+for (const dirEntry of dirEntries) {
   test("data directory " + dirEntry.name, () => {
     assert.ok(dirEntry.isFile, "only files in the data directory");
     const { name } = dirEntry;

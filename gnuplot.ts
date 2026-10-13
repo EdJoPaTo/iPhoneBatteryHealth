@@ -1,3 +1,8 @@
+import childProcess from "node:child_process";
+import util from "node:util";
+
+const execFile = util.promisify(childProcess.execFile);
+
 export async function run(
   script: string,
   paramenters: string[] = [],
@@ -10,6 +15,5 @@ export async function run(
 
   args.push(script);
 
-  const p = new Deno.Command("gnuplot", { args }).spawn();
-  await p.status;
+  await execFile("gnuplot", args);
 }

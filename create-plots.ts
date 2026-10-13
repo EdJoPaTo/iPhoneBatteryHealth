@@ -1,10 +1,12 @@
-#!/usr/bin/env -S deno run --allow-read=data --allow-write=tmp --allow-run=gnuplot
+#!/usr/bin/env -S deno run --allow-read=. --allow-write=tmp --allow-run=gnuplot --allow-env
+
+import { mkdir } from "node:fs/promises";
 
 import { batteryAge } from "./battery-age.ts";
 import { batteryDate } from "./battery-date.ts";
 import * as data from "./data.ts";
 
-await Deno.mkdir("tmp", { recursive: true });
+await mkdir("tmp", { recursive: true });
 
 const batteries = await data.loadAll("data");
 

@@ -1,7 +1,9 @@
+import { existsSync } from "node:fs";
+import { readFile, writeFile } from "node:fs/promises";
+
 // This file is usable on its own without deno.json imports
 // deno-lint-ignore no-import-prefix
 import * as yaml from "jsr:@std/yaml@1";
-import { existsSync } from "node:fs";
 
 export type IsoDate = `${number}-${number}-${number}`;
 
@@ -112,7 +114,7 @@ export async function load(
     return [];
   }
 
-  const content = await Deno.readTextFile(path);
+  const content = await readFile(path, "utf8");
   return yaml.parse(content) as BatteryEntry[];
 }
 
@@ -137,5 +139,5 @@ export async function save(
   }
 
   const path = devicePath(dataDirectory, device);
-  await Deno.writeTextFile(path, yaml.stringify(content));
+  await writeFile(path, yaml.stringify(content), "utf8");
 }

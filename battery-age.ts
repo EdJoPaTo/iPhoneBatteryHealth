@@ -1,4 +1,7 @@
+import { writeFile } from "node:fs/promises";
+
 import * as csv from "@std/csv";
+
 import type { BatteryEntry } from "./data.ts";
 import * as gnuplot from "./gnuplot.ts";
 
@@ -25,7 +28,7 @@ async function generateBatteryCsvFile(
   });
 
   const content = csv.stringify(lines, { columns });
-  await Deno.writeTextFile(filename, content);
+  await writeFile(filename, content, "utf8");
 }
 
 export async function batteryAge(
