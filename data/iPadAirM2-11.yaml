@@ -1,5 +1,5 @@
 - owner: Wiebke
-  device: iPadAir11M2
+  device: iPadAirM2-11
   age: '2024-05-15'
   health:
     '2024-09-19': 100
@@ -42,7 +42,7 @@
     '2026-08-15': 188
     '2026-10-15': 200
 - owner: lavalaempchen
-  device: iPadAir11M2
+  device: iPadAirM2-11
   age: '2024-08-19'
   health:
     '2024-11-20': 99
